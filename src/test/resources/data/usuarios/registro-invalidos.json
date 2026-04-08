@@ -1,0 +1,12 @@
+{
+    "camposVacios": {
+        "name": "",
+        "email": "",
+        "password": ""
+    },
+    "passwordCorta": {
+        "name": "Usuario QA",
+        "email": "qa.test@example.com",
+        "password": "abc"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "credencialesInvalidas": {
+        "email": "no.existe@example.com",
+        "password": "WrongPassword99"
+    }
+}
