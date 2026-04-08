@@ -7,8 +7,11 @@ function fn() {
       || karate.properties['qa.baseUrl']
       || karate.properties['baseUrl']
       || 'http://localhost:8080',
+    usuariosBaseUrl: karate.properties['usuarios.baseUrl'] || 'http://localhost:8081',
+    pedidosBaseUrl:  karate.properties['pedidos.baseUrl']  || 'http://localhost:8080',
+    rutasBaseUrl:    karate.properties['rutas.baseUrl']    || 'http://localhost:8080',
     auth: {
-      type: karate.properties['auth.type'] || 'bearer',
+      type: karate.properties['auth.type'] || 'login',
       token: karate.properties['auth.token'],
       tokenUrl: karate.properties['auth.tokenUrl'],
       clientId: karate.properties['auth.clientId'],
@@ -16,6 +19,17 @@ function fn() {
       username: karate.properties['auth.username'],
       password: karate.properties['auth.password'],
       loginPath: karate.properties['auth.loginPath']
+    },
+    paths: {
+      usuarios: {
+        register: '/api/users/register',
+        login:    '/api/users/login'
+      },
+      pedidos: {
+        pedido:     '/api/v1/pedido',
+        confirmar:  '/api/v1/pedido/confirmar',
+        misPedidos: '/api/v1/pedido/mis-pedidos'
+      }
     }
   };
 
