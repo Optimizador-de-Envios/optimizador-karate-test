@@ -1,4 +1,4 @@
-# optimizador-karate-test
+# Optimizador de Envíos - Suite de Pruebas Karate DSL
 
 Suite de pruebas de API automatizadas con [Karate DSL](https://github.com/karatelabs/karate) para el proyecto **Optimizador de Envíos**, compuesto por dos microservicios:
 
