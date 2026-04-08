@@ -1,0 +1,103 @@
+{
+    "camposVacios": {
+        "order": {
+            "origin": {
+                "name": "",
+                "lat": null,
+                "lng": null
+            },
+            "destination": {
+                "name": "",
+                "lat": null,
+                "lng": null
+            },
+            "weight": null,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        }
+    },
+    "origenFuera": {
+        "order": {
+            "origin": {
+                "name": "Buenos Aires, Argentina",
+                "lat": -34.6037,
+                "lng": -58.3816
+            },
+            "destination": {
+                "name": "Medellin, Colombia",
+                "lat": 6.2442,
+                "lng": -75.5812
+            },
+            "weight": 5.0,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        }
+    },
+    "destinoFuera": {
+        "order": {
+            "origin": {
+                "name": "Bogota, Colombia",
+                "lat": 4.711,
+                "lng": -74.0721
+            },
+            "destination": {
+                "name": "Buenos Aires, Argentina",
+                "lat": -34.6037,
+                "lng": -58.3816
+            },
+            "weight": 5.0,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        }
+    },
+    "pesoMenorMinimo": {
+        "order": {
+            "origin": {
+                "name": "Bogota, Colombia",
+                "lat": 4.711,
+                "lng": -74.0721
+            },
+            "destination": {
+                "name": "Medellin, Colombia",
+                "lat": 6.2442,
+                "lng": -75.5812
+            },
+            "weight": 0.0009,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        }
+    },
+    "pesoMayorMaximo": {
+        "order": {
+            "origin": {
+                "name": "Bogota, Colombia",
+                "lat": 4.711,
+                "lng": -74.0721
+            },
+            "destination": {
+                "name": "Medellin, Colombia",
+                "lat": 6.2442,
+                "lng": -75.5812
+            },
+            "weight": 70.001,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        }
+    },
+    "sinPrioridad": {
+        "order": {
+            "origin": {
+                "name": "Bogota, Colombia",
+                "lat": 4.711,
+                "lng": -74.0721
+            },
+            "destination": {
+                "name": "Medellin, Colombia",
+                "lat": 6.2442,
+                "lng": -75.5812
+            },
+            "weight": 5.0,
+            "weightUnit": "KILOGRAMS"
+        }
+    }
+}

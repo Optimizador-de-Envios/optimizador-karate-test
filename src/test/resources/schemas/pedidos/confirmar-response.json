@@ -1,0 +1,12 @@
+{
+    "id": "#string",
+    "confirmationToken": "#string",
+    "origin": "#object",
+    "destination": "#object",
+    "weight": "#number",
+    "weightUnit": "#string",
+    "priority": "#string",
+    "distanceKm": "#number",
+    "selectedOption": "#object",
+    "createdAt": "#string"
+}

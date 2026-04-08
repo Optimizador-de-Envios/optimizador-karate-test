@@ -1,0 +1,44 @@
+{
+    "sinSelectedOption": {
+        "confirmationToken": "test-no-option-001",
+        "order": {
+            "origin": {
+                "name": "Bogota, Colombia",
+                "lat": 4.711,
+                "lng": -74.0721
+            },
+            "destination": {
+                "name": "Medellin, Colombia",
+                "lat": 6.2442,
+                "lng": -75.5812
+            },
+            "weight": 5.0,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        }
+    },
+    "proveedorInvalido": {
+        "confirmationToken": "test-invalid-option-001",
+        "order": {
+            "origin": {
+                "name": "Bogota, Colombia",
+                "lat": 4.711,
+                "lng": -74.0721
+            },
+            "destination": {
+                "name": "Medellin, Colombia",
+                "lat": 6.2442,
+                "lng": -75.5812
+            },
+            "weight": 5.0,
+            "weightUnit": "KILOGRAMS",
+            "priority": "COST"
+        },
+        "selectedOption": {
+            "providerName": "FakeProvider",
+            "cost": 99999.0,
+            "currency": "COP",
+            "estimatedDays": 99
+        }
+    }
+}

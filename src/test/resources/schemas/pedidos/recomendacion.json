@@ -1,0 +1,9 @@
+{
+    "recommendation": {
+        "providerName": "#string",
+        "cost": "#number",
+        "currency": "#string",
+        "estimatedDays": "#number"
+    },
+    "alternatives": "#[] #object"
+}
