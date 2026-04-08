@@ -5,7 +5,8 @@ Suite de pruebas de API automatizadas con [Karate DSL](https://github.com/karate
 - `user-service` — registro y autenticación (`http://localhost:8081`)
 - `shipment-service` — cotización, confirmación e historial de pedidos (`http://localhost:8080`)
 
-> Las pruebas fueron generadas mediante una implementación de **ASDD** (Automated Scenario-Driven Development) optimizada para Karate por [Nahuel Lemes](https://github.com/nahulemesf). El flujo completo — desde la spec de automatización hasta los features, data files y schemas — fue producido a través de ese proceso.
+> Las pruebas fueron generadas mediante una implementación de **ASDD** (Agent Spec-Driven Development) optimizada para Karate por [Nahuel Lemes](https://github.com/nahulemesf).  
+> El flujo completo — desde la spec de automatización hasta los features, data files y schemas — fue producido a través de ese proceso.
 
 ---
 
@@ -35,6 +36,14 @@ src/test/resources/
   data/<dominio>/                     # Datos de entrada por escenario
   schemas/<dominio>/                  # Schemas de validación de respuesta
 ```
+
+---
+
+## Reporte de bugs
+
+Durante la ejecución del suite se encontraron discrepancias entre lo que el PRD define y lo que el backend implementa.
+
+→ [Ver reporte completo](docs/BUG_REPORT.md)
 
 ---
 
@@ -87,43 +96,21 @@ Los escenarios `@wip` están bloqueados por implementación pendiente en el back
 
 ---
 
-## Reporte de bugs
+## Implementación de ASDD para Karate
 
-Durante la ejecución del suite se encontraron discrepancias entre lo que el PRD define y lo que el backend implementa.
-
-→ [Ver reporte completo](docs/BUG_REPORT.md)
-
----
-
-## Baseline del template
-
-Este template queda aterrizado a estas decisiones:
-
-- **Build tool:** Maven
-- **Java:** 17
-- **Karate:** 1.5.2
-- **Tipo de automatización:** API-first
-- **Organización:** por dominio funcional
-- **Runners:** uno por dominio
-- **Tags:** `@smoke`, `@regression`, `@negative`, `@auth`, `@contract`, `@wip`
-- **Ambiente por defecto:** `qa`
-- **Ambientes adicionales:** opcionales, solo si el proyecto o el requerimiento los piden explícitamente
-- **Auth configurable:** `bearer`, `oauth`, `login`
-
-## Scaffold pre-built
-
-El scaffold Karate ya está incluido en el template. Al implementar un feature, solo se agregan los artefactos del dominio:
-
-- `src/test/java/template/<dominio>/<Dominio>Runner.java`
-- `src/test/java/template/<dominio>/<flujo>.feature`
-- `src/test/resources/data/<dominio>/**`
-- `src/test/resources/schemas/<dominio>/**`
-
-Y, además:
-
-- specs en `.github/specs/`
+El proceso de desarrollo de esta suite se basó en una implementación personalizada de **ASDD** (Agent Spec-Driven Development) para Karate, que optimiza la generación de artefactos a partir de requerimientos escritos en lenguaje natural.
 
 ## Flujo
+
+### Paso 1 — Escribir el requerimiento en lenguaje natural
+El proceso inicia con la redacción de un requerimiento o historia de usuario en lenguaje natural, siguiendo una plantilla estructurada que incluye:
+- Descripción general del feature o funcionalidad a automatizar
+- Detalles del dominio, subdominios y endpoints involucrados
+- Estrategia de autenticación y flujo de obtención de tokens
+- Lista de artefactos a generar (runners, features, helpers, data files, schemas)
+
+### Paso 2 — Implementación asistida por agentes
+Con el requerimiento definido, se utilizan comandos específicos para que un agente especializado en ASDD genere automáticamente los artefactos necesarios para la automatización en Karate. Las opciones incluyen:
 
 ### Opción A — Orquestación completa
 
