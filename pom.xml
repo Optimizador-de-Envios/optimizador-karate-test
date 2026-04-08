@@ -52,8 +52,13 @@
                 <version>${surefire.version}</version>
                 <configuration>
                     <includes>
-                        <include>**/*Runner.java</include>
+                        <include>**/AllRunner.java</include>
                     </includes>
+                    <excludes>
+                        <exclude>**/usuarios/UsuariosRunner.java</exclude>
+                        <exclude>**/pedidos/PedidosRunner.java</exclude>
+                        <exclude>**/rutas/RutasRunner.java</exclude>
+                    </excludes>
                     <systemPropertyVariables>
                         <karate.env>${karate.env}</karate.env>
                         <karate.options>${karate.options}</karate.options>
