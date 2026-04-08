@@ -1,0 +1,12 @@
+{
+    "pedido": {
+        "origen": "Bogotá, Colombia",
+        "destino": "Medellín, Colombia",
+        "peso": 5,
+        "prioridad": "MENOR_COSTO"
+    },
+    "coordenadaEsperada": {
+        "lat": 4.711,
+        "lng": -74.0721
+    }
+}

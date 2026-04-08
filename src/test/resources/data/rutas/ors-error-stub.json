@@ -1,0 +1,8 @@
+{
+    "pedido": {
+        "origen": "Bogotá, Colombia",
+        "destino": "Medellín, Colombia",
+        "peso": 5,
+        "prioridad": "MENOR_COSTO"
+    }
+}
