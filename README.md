@@ -1,10 +1,99 @@
-# ASDD — Template Definitivo para Karate
+# optimizador-karate-test
 
-Framework de automatización asistida por IA para convertir `requirements.md` en un proyecto Karate funcional siguiendo un baseline estable y reusable entre proyectos.
+Suite de pruebas de API automatizadas con [Karate DSL](https://github.com/karatelabs/karate) para el proyecto **Optimizador de Envíos**, compuesto por dos microservicios:
+
+- `user-service` — registro y autenticación (`http://localhost:8081`)
+- `shipment-service` — cotización, confirmación e historial de pedidos (`http://localhost:8080`)
+
+> Las pruebas fueron generadas mediante una implementación de **ASDD** (Automated Scenario-Driven Development) optimizada para Karate por [Nahuel Lemes](https://github.com/nahulemesf). El flujo completo — desde la spec de automatización hasta los features, data files y schemas — fue producido a través de ese proceso.
+
+---
+
+## Estructura del proyecto
 
 ```text
-Requerimiento → Spec de Automatización → Features por dominio
+src/test/java/
+  karate-config.js                    # URLs, paths y tokens por ambiente
+  optimizadorenvios/
+    AllRunner.java                    # Runner principal (excluye @wip)
+    usuarios/
+      UsuariosRunner.java
+      registro.feature
+      login.feature
+    pedidos/
+      PedidosRunner.java
+      registro-pedido.feature
+      recomendacion-proveedor.feature
+      confirmacion-persistencia.feature
+    rutas/
+      RutasRunner.java
+      transformacion-coordenadas.feature
+      ors-error.feature
+
+src/test/resources/
+  helpers/auth/register-login.feature # Helper reutilizable de autenticación
+  data/<dominio>/                     # Datos de entrada por escenario
+  schemas/<dominio>/                  # Schemas de validación de respuesta
 ```
+
+---
+
+## Cómo ejecutar las pruebas
+
+### Requisitos previos
+
+- Java 17+
+- `user-service` corriendo en `http://localhost:8081`
+- `shipment-service` corriendo en `http://localhost:8080`
+
+### Ejecutar el suite completo
+
+```bash
+./mvnw test
+```
+
+Esto ejecuta `AllRunner`, que cubre los 3 dominios en un solo reporte y excluye automáticamente los escenarios marcados con `@wip`.
+
+### Ejecutar un dominio individual (desde el IDE)
+
+Cada dominio tiene su propio runner para ejecución local:
+
+| Dominio | Runner |
+|---|---|
+| Usuarios | `UsuariosRunner.java` |
+| Pedidos | `PedidosRunner.java` |
+| Rutas | `RutasRunner.java` |
+
+### Ver el reporte HTML
+
+Después de ejecutar, el reporte unificado queda en:
+
+```
+target/karate-reports/karate-summary.html
+```
+
+---
+
+## Estado del suite
+
+| Dominio | Features | Escenarios | Pasados | `@wip` |
+|---|---|---|---|---|
+| usuarios | 2 | 6 | 6 | 0 |
+| pedidos | 3 | 13 | 13 | 4 |
+| rutas | 2 | 0 | 0 | 2 |
+| **Total** | **7** | **19** | **19** | **6** |
+
+Los escenarios `@wip` están bloqueados por implementación pendiente en el backend (ver reporte de bugs).
+
+---
+
+## Reporte de bugs
+
+Durante la ejecución del suite se encontraron discrepancias entre lo que el PRD define y lo que el backend implementa.
+
+→ [Ver reporte completo](docs/BUG_REPORT.md)
+
+---
 
 ## Baseline del template
 
