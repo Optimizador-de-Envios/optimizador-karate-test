@@ -1,6 +1,6 @@
 # Spec: optimizador-envios
 
-**Status:** APPROVED
+**Status:** IMPLEMENTED
 **Feature:** optimizador-envios
 **Ambiente:** qa
 
