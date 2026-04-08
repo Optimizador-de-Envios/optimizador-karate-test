@@ -55,12 +55,6 @@ Referencia cruzada entre los casos definidos en `TEST_CASES.md` y los escenarios
 
 | TC | Descripción breve | Feature | Tags | Estado |
 |---|---|---|---|---|
-| TC-HU07-02 | Correo duplicado retorna HTTP 409 | `usuarios/registro.feature` | `@negative` | ✅ Ejecutado |
-| TC-HU07-03 | Campos obligatorios vacíos retorna HTTP 400 | `usuarios/registro.feature` | `@negative` | ✅ Ejecutado |
-| TC-HU07-04 | Contraseña < 8 caracteres retorna HTTP 400 | `usuarios/registro.feature` | `@negative` | ✅ Ejecutado |
-| TC-HU07-05 | Contraseña almacenada cifrada (login lo verifica) | `usuarios/registro.feature` | `@smoke` | ✅ Ejecutado |
-| TC-HU08-02 | Credenciales inválidas retorna HTTP 401 | `usuarios/login.feature` | `@negative` | ✅ Ejecutado |
-| TC-HU08-01 | Login exitoso retorna token JWT | `usuarios/login.feature` | `@smoke @auth` | ✅ Ejecutado |
 | TC-HU01-03 | Origen, destino y peso vacíos retorna HTTP 400 | `pedidos/registro-pedido.feature` | `@negative` | ✅ Ejecutado |
 | TC-HU01-04 | Origen fuera de Colombia retorna HTTP 400 | `pedidos/registro-pedido.feature` | `@negative @wip` | ⚠️ `@wip` |
 | TC-HU01-04 | Destino fuera de Colombia retorna HTTP 400 | `pedidos/registro-pedido.feature` | `@negative @wip` | ⚠️ `@wip` |
@@ -80,6 +74,12 @@ Referencia cruzada entre los casos definidos en `TEST_CASES.md` y los escenarios
 | TC-HU05-04 | Confirmación exitosa persiste pedido en mis-pedidos | `pedidos/confirmacion-persistencia.feature` | `@smoke @auth` | ✅ Ejecutado |
 | TC-HU06-03 | Coordenadas ORS `[lng,lat]` convertidas a `[lat,lng]` | `rutas/transformacion-coordenadas.feature` | `@regression @contract @wip` | ⚠️ `@wip` |
 | TC-HU06-05 | ORS falla — backend responde de forma controlada | `rutas/ors-error.feature` | `@regression @negative @wip` | ⚠️ `@wip` |
+| TC-HU07-02 | Correo duplicado retorna HTTP 409 | `usuarios/registro.feature` | `@negative` | ✅ Ejecutado |
+| TC-HU07-03 | Campos obligatorios vacíos retorna HTTP 400 | `usuarios/registro.feature` | `@negative` | ✅ Ejecutado |
+| TC-HU07-04 | Contraseña < 8 caracteres retorna HTTP 400 | `usuarios/registro.feature` | `@negative` | ✅ Ejecutado |
+| TC-HU07-05 | Contraseña almacenada cifrada (login lo verifica) | `usuarios/registro.feature` | `@smoke` | ✅ Ejecutado |
+| TC-HU08-01 | Login exitoso retorna token JWT | `usuarios/login.feature` | `@smoke @auth` | ✅ Ejecutado |
+| TC-HU08-02 | Credenciales inválidas retorna HTTP 401 | `usuarios/login.feature` | `@negative` | ✅ Ejecutado |
 
 > Los TCs marcados con ⚠️ `@wip` están bloqueados por implementación pendiente en el backend. Ver [reporte de bugs](docs/BUG_REPORT.md).
 
