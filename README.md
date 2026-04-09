@@ -7,8 +7,9 @@ Suite de pruebas de API automatizadas con [Karate DSL](https://github.com/karate
 
 ---
 
-> Las pruebas fueron generadas mediante una implementación de **ASDD** (Agent Spec-Driven Development) optimizada para Karate por [Nahuel Lemes](https://github.com/nahulemesf).  
+> Las pruebas fueron generadas mediante una implementación de **ASDD** (Agent Spec-Driven Development) optimizada para Karate por [Nahuel Lemes](https://github.com/nahulemesf), en rol de **QA Engineer**.  
 > El flujo completo — desde la spec de automatización hasta los features, data files y schemas — fue producido a través de ese proceso.
+> **Developer:** [Santiago Angarita Avila](https://github.com/sanavi01).
 
 ---
 
